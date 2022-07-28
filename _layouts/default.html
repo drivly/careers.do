@@ -12,17 +12,16 @@
   <header class="absolute inset-x-0 top-0 h-16 py-10">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
       <nav class="relative z-50 flex justify-between items-center">
-        <div class="flex items-center">
+        <div>
           <a aria-label="Home" href="https://driv.ly">
-            <img class="mx-auto h-8 mb-7"
+            <img class="mx-auto h-8"
               src="https://uploads-ssl.webflow.com/60bee04bdb1a7a33432ce295/60beeb6f38814ea48d5c7c02_Drivly_logo_light.svg" />
           </a>
         </div>
-        <div class="flex items-center">
-          <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600"
+        <div class="flex items-center block">
+          <a class="text-sm font-semibold focus:outline-none text-slate-50 hover:text-slate-100"
             href="/twitter"><span>Share on Twitter</span>
           </a>
-          <div class="-mr-1 md:hidden"></div>
         </div>
       </nav>
     </div>
@@ -33,12 +32,10 @@
     <img
       src="https://images.unsplash.com/photo-1608501821300-4f99e58bba77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
       alt="background image"
-      class="absolute opacity-[.06] top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="1308" />
-    <div
-      class="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]">
-    </div>
+      class="absolute opacity-[.05] top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="1308" />
+    
 
-    <div class="mx-auto max-w-7xl px-4 pt-2 pb-16 text-center sm:px-6 lg:px-8 sm:pt-32">
+    <div class="mx-auto max-w-7xl px-4 py-36 sm:py-10 text-center sm:px-6 lg:px-8">
       <!-- Call Out -->
       <div class="mx-auto py-5">
         <span
@@ -48,7 +45,7 @@
       </div>
 
       <!-- Title Text -->
-      <h1 class="font-display mx-auto max-w-3xl font-bold tracking-tight text-slate-50 md:text-5xl text-4xl">
+      <h1 class="mx-auto max-w-3xl font-bold tracking-tight text-slate-50 md:text-5xl text-4xl">
         Interested in building the future of
         <span class="relative whitespace-nowrap">
           <svg aria-hidden="true" viewBox="0 0 418 42"
@@ -61,10 +58,11 @@
         </span>
         ?
       </h1>
-      <!-- Sub Copy -->
-      <!-- <div class="mx-auto mt-6 max-w-2xl text-md tracking-tight text-slate-500">
+       <!-- {{Content}} -->
+      <div class="mx-auto mt-6 max-w-2xl text-md tracking-loose text-slate-500 prose py-6">
+        {{ content }}
 
-        Love Durable Objects & the Cloudflare Workers Ecosystems? We're hiring!
+        <!-- Love Durable Objects & the Cloudflare Workers Ecosystems? We're hiring!
 
         Driv.ly is simple APIs to buy & sell cars online, funded by some of the biggest names in automotive and finance
         & insurance
@@ -77,15 +75,10 @@
         Worker and Durable Object. If we like what we see on your GitHub profile, we'll reach out to schedule an
         interview.
 
-        We're looking forward to meeting you!
+        We're looking forward to meeting you! -->
 
-      </div> -->
-
-      <!-- Content -->
-      <div class=" mx-auto prose text-white pt-10">
-        {{ content }}
       </div>
-
+      
       <!-- Apply CTA -->
       <div class="mt-10 flex justify-center">
         <a class="group inline-flex items-center justify-center rounded-lg bg-slate-50 py-3 px-6 w-full sm:w-56 text-sm font-semibold text-white hover:bg-slate-200 hover:text-slate-100 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:bg-slate-800 active:text-slate-300"
