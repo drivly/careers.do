@@ -5,23 +5,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <!-- fonts? -->
 </head>
 
 <body>
-  <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#060611] py-6 sm:py-12">
-    <div class="mx-auto max-w-7xl px-4 pt-20 pb-16 text-center sm:px-6 lg:px-8 lg:pt-32">
-      <!-- Drivly logo -->
-      <div>
-        <img class="mx-auto h-8 mb-7"
-          src="https://uploads-ssl.webflow.com/60bee04bdb1a7a33432ce295/60beeb6f38814ea48d5c7c02_Drivly_logo_light.svg" />
-      </div>
+  <header class="absolute inset-x-0 top-0 h-16 py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+      <nav class="relative z-50 flex justify-between items-center">
+        <div class="flex items-center">
+          <a aria-label="Home" href="https://driv.ly">
+            <img class="mx-auto h-8 mb-7"
+              src="https://uploads-ssl.webflow.com/60bee04bdb1a7a33432ce295/60beeb6f38814ea48d5c7c02_Drivly_logo_light.svg" />
+          </a>
+        </div>
+        <div class="flex items-center">
+          <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600"
+            href="/twitter"><span>Share on Twitter</span>
+          </a>
+          <div class="-mr-1 md:hidden"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#060611] py-4 sm:py-1">
+    <!-- Background Img -->
+    <img
+      src="https://images.unsplash.com/photo-1608501821300-4f99e58bba77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+      alt="background image"
+      class="absolute opacity-[.06] top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="1308" />
+    <div
+      class="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]">
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 pt-2 pb-16 text-center sm:px-6 lg:px-8 sm:pt-32">
       <!-- Call Out -->
-      <div class="mx-auto p-2 px-10 mb-7 text-sm text-slate-500 bg-slate-50">
-        We're Hiring
+      <div class="mx-auto py-5">
+        <span
+          class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-[#00cab9]/25 text-[#00cab2]">
+          We're hiring!
+        </span>
       </div>
+
       <!-- Title Text -->
-      <h1 class="font-display mx-auto max-w-3xl font-medium tracking-tight text-slate-50 sm:text-5xl text-3xl">
-        Interested in building the next generation of
+      <h1 class="font-display mx-auto max-w-3xl font-bold tracking-tight text-slate-50 md:text-5xl text-4xl">
+        Interested in building the future of
         <span class="relative whitespace-nowrap">
           <svg aria-hidden="true" viewBox="0 0 418 42"
             class="absolute top-2/3 left-0 h-[0.58em] w-full fill-[#00cab9]/20" preserveAspectRatio="none">
@@ -31,29 +59,46 @@
           </svg>
           <span class="relative text-[#00cab9]">Automotive Commerce</span>
         </span>
-        experiences?
+        ?
       </h1>
       <!-- Sub Copy -->
-      <p class="mx-auto mt-6 max-w-2xl text-md tracking-tight text-slate-500">
-        Apply below with your GitHub and we'll be in touch!
-      </p>
-      <!-- Apply CTA -->
-      <div class="mt-10 flex justify-center gap-x-6">
-        <a class="group inline-flex items-center justify-center rounded-lg bg-slate-50 py-3 px-6 text-sm font-semibold text-white hover:bg-slate-200 hover:text-slate-100 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:bg-slate-800 active:text-slate-300"
-          href="/apply">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-            class="h-5 w-5 flex-none fill-white group-active:fill-current "></img>
-          <span class="ml-3 text-slate-900">Apply Now</span>
-        </a>
-      </div>
+      <!-- <div class="mx-auto mt-6 max-w-2xl text-md tracking-tight text-slate-500">
+
+        Love Durable Objects & the Cloudflare Workers Ecosystems? We're hiring!
+
+        Driv.ly is simple APIs to buy & sell cars online, funded by some of the biggest names in automotive and finance
+        & insurance
+
+        We're building our entire infrastructure on Cloudflare Workers, Durable Objects, KV, R2, and PubSub. If you're
+        as passionate about these transformational technologies as we are, we'd love for you to join our rapidly-growing
+        team.
+
+        We have the easiest job application you've ever seen: it's a one-click login to GitHub, powered by a Cloudflare
+        Worker and Durable Object. If we like what we see on your GitHub profile, we'll reach out to schedule an
+        interview.
+
+        We're looking forward to meeting you!
+
+      </div> -->
+
       <!-- Content -->
       <div class=" mx-auto prose text-white pt-10">
         {{ content }}
-        <div>
-        </div>
+      </div>
+
+      <!-- Apply CTA -->
+      <div class="mt-10 flex justify-center">
+        <a class="group inline-flex items-center justify-center rounded-lg bg-slate-50 py-3 px-6 w-full sm:w-56 text-sm font-semibold text-white hover:bg-slate-200 hover:text-slate-100 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:bg-slate-800 active:text-slate-300"
+          href="/apply">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+            class="h-5 w-5 flex-none fill-white group-active:fill-current">
+          </img>
+          <span class="ml-3 text-slate-900">Apply Now</span>
+        </a>
       </div>
 
     </div>
   </div>
 </body>
+
 </html>
