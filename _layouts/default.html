@@ -10,10 +10,16 @@
 <body>
   <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#060611] py-6 sm:py-12">
     <div class="mx-auto max-w-7xl px-4 pt-20 pb-16 text-center sm:px-6 lg:px-8 lg:pt-32">
+      <!-- Drivly logo -->
       <div>
         <img class="mx-auto h-8 mb-7"
           src="https://uploads-ssl.webflow.com/60bee04bdb1a7a33432ce295/60beeb6f38814ea48d5c7c02_Drivly_logo_light.svg" />
       </div>
+      <!-- Call Out -->
+      <div class="mx-auto p-2 px-10 mb-7 text-sm text-slate-500 bg-slate-50">
+        We're Hiring
+      </div>
+      <!-- Title Text -->
       <h1 class="font-display mx-auto max-w-3xl font-medium tracking-tight text-slate-50 sm:text-5xl text-3xl">
         Interested in building the next generation of
         <span class="relative whitespace-nowrap">
@@ -27,11 +33,11 @@
         </span>
         experiences?
       </h1>
-
+      <!-- Sub Copy -->
       <p class="mx-auto mt-6 max-w-2xl text-md tracking-tight text-slate-500">
-        Apply below with your GitHub and we'll bein touch!
+        Apply below with your GitHub and we'll be in touch!
       </p>
-
+      <!-- Apply CTA -->
       <div class="mt-10 flex justify-center gap-x-6">
         <a class="group inline-flex items-center justify-center rounded-lg bg-slate-50 py-3 px-6 text-sm font-semibold text-white hover:bg-slate-200 hover:text-slate-100 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:bg-slate-800 active:text-slate-300"
           href="/apply">
@@ -40,13 +46,14 @@
           <span class="ml-3 text-slate-900">Apply Now</span>
         </a>
       </div>
+      <!-- Content -->
       <div class=" mx-auto prose text-white pt-10">
         {{ content }}
         <div>
         </div>
       </div>
+
     </div>
   </div>
 </body>
-
 </html>
