@@ -1,3 +1,5 @@
+[![](https://github.com/drivly/driv.ly/raw/main/applyHero.png)](https://driv.ly)
+
 # [Durable Object Careers](https://careers.do)
 Love Durable Objects &amp; the Cloudflare Workers Ecosystems?  [We're hiring!](https://careers.do/apply)
 
