@@ -1,3 +1,4 @@
+const thanks = (applicant) => `
 <!doctype html>
 <html>
 
@@ -31,16 +32,18 @@
         </span>
       </div>
       <h1 class="mx-auto max-w-5xl font-bold tracking-tight text-slate-50 md:text-6xl text-6xl">
-        Thanks for applying! 🎉
+        Thanks for applying${applicant ? ', ' + applicant : ''}! 🎉
       </h1>
 
       <div class="mx-auto mt-6 max-w-2xl text-md tracking-loose text-slate-400 prose py-3">
-        What happens next? We will review your profile and if we think you'd be a good fit for the roll, we will reach
-        out to set up an inital call!
+        What happens next? We will review your profile and if we think you'd be a good fit for the role, we will reach
+        out to set up an initial call!
       </div>
 
     </div>
   </div>
 </body>
 
-</html>
+</html>`
+
+export default thanks

@@ -1,0 +1,34 @@
+{
+  "name": "careers.do",
+  "version": "1.0.0",
+  "description": "A Cloudflare worker for receving employment inquiries.",
+  "module": "index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler publish",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drivly/careers.do.git"
+  },
+  "author": "Samuel Lippert <samuel@driv.ly>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drivly/careers.do/issues"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "homepage": "https://github.com/drivly/careers.do#readme",
+  "dependencies": {
+    "itty-router": "^2.6.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "wrangler": "^2.1.3"
+  }
+}

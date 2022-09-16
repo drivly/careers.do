@@ -1,0 +1,9 @@
+name = "careers-do"
+account_id = "b6641681fe423910342b9ffa1364c76d"
+main = "index.js"
+compatibility_date = "2022-09-16"
+node_compat = true
+
+services = [
+  { binding = "CTX", service = "ctx-do", environment = "production" }
+]
