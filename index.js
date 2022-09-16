@@ -6,8 +6,7 @@ router.get('/apply', async (req) => {
   return new Response(null, {
     status: 302,
     headers: {
-      location: "/login",
-      referer: new URL(req.url).origin + "/thanks"
+      location: "/login?redirect_uri=" + new URL(req.url).origin + "/thanks",
     }
   })
 })
