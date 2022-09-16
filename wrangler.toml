@@ -7,3 +7,7 @@ node_compat = true
 services = [
   { binding = "CTX", service = "ctx-do", environment = "production" }
 ]
+
+kv_namespaces = [
+  { binding = "USERS", id = "7c8468b38a1446a293ad78ece015f86c", preview_id = "e99589c478c24cb7b1c7f413c92db429" },
+]
