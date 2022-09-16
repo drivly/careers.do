@@ -1,4 +1,4 @@
-const thanks = (applicant) => `
+const thanks = (name, imageUrl) => `
 <!doctype html>
 <html>
 
@@ -32,7 +32,7 @@ const thanks = (applicant) => `
         </span>
       </div>
       <h1 class="mx-auto max-w-5xl font-bold tracking-tight text-slate-50 md:text-6xl text-6xl">
-        Thanks for applying${applicant ? ', ' + applicant : ''}! 🎉
+        Thanks for applying${name ? ', ' + name : ''}! 🎉
       </h1>
 
       <div class="mx-auto mt-6 max-w-2xl text-md tracking-loose text-slate-400 prose py-3">
