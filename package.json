@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/drivly/careers.do#readme",
   "dependencies": {
+    "@slack/webhook": "^6.1.0",
     "itty-router": "^2.6.1"
   },
   "devDependencies": {

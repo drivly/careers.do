@@ -1,3 +1,4 @@
+import { IncomingWebhook } from '@slack/webhook'
 import { Router } from 'itty-router'
 import thanks from './_layouts/thanks'
 const router = Router()
@@ -22,6 +23,11 @@ router.get('/thanks', async (req, env) => {
       }
     })
   }
+  const url = env.SLACK_WEBHOOK_URL
+  const webhook = new IncomingWebhook(url)
+  await webhook.send({
+    text: `careers.do just collected a new candidate! <a href="https://github.com/${user.name}">${user.name}</a>`,
+  })
   return new Response(thanks(), {
     headers: { 'content-type': 'text/html; charset=utf-8' }
   })
