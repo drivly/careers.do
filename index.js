@@ -23,7 +23,7 @@ router.get('/thanks', async (req, env) => {
     })
   }
 
-  await fetch(env.SLACK_WEBHOOK_URL, { method: 'POST', body: `careers.do just collected a new candidate! <a href="https://github.com/${user.name}">${user.name}</a>` })
+  await fetch(env.SLACK_WEBHOOK_URL, { method: 'POST', body: JSON.stringify({ icon_url: user.image, text: `careers.do just collected a new candidate! <a href="https://github.com/${user.name}">${user.name}</a>` }) })
 
   return new Response(thanks(), {
     headers: { 'content-type': 'text/html; charset=utf-8' }
