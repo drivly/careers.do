@@ -23,9 +23,9 @@ router.get('/thanks', async (req, env) => {
     })
   }
 
-  let githubUser = await env.USERS.get(user.profile.id).then(JSON.parse)
-  await fetch(env.SLACK_WEBHOOK_URL, { method: 'POST', body: JSON.stringify({ icon_url: user.profile.image, text: `careers.do just collected a new candidate!\n${user.profile.name}\n${githubUser.user.html_url}\n${githubUser.user.email}` }) })
-  return new Response(thanks(user.profile.name, user.profile.image), {
+  let githubUser = await env.USERS.get(user.id).then(JSON.parse)
+  await fetch(env.SLACK_WEBHOOK_URL, { method: 'POST', body: JSON.stringify({ icon_url: user.image, text: `careers.do just collected a new candidate!\n${user.name}\n${githubUser.user.html_url}\n${githubUser.user.email}` }) })
+  return new Response(thanks(user.name, user.image), {
     headers: { 'content-type': 'text/html; charset=utf-8' }
   })
 })
